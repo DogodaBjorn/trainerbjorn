@@ -1,0 +1,34 @@
+/* ===== Basis reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+body {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== Navigatie ===== */
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #005f73;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration:
