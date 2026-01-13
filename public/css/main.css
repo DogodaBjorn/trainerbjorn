@@ -3,13 +3,17 @@
   box-sizing: border-box;
 }
 
+/* ===== Basis typografie & achtergrond ===== */
 body {
   margin: 0;
   padding: 0;
+
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
   background-color: #f7f7f7;
   color: #222;
-  line-height: 1.6;
 }
 
 /* ===== Layout ===== */
@@ -21,29 +25,35 @@ body {
 
 /* ===== Navigatie ===== */
 nav {
-  margin-bottom: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
   text-decoration: none;
   color: #005f73;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 nav a:hover {
-  text-decoration:
-
-/* ===== Navigatie verfijning ===== */
-nav {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #ddd;
+  text-decoration: underline;
 }
 
-nav a {
-  font-size: 0.95rem;
+/* ===== Algemene elementen ===== */
+h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 hr {
