@@ -32,3 +32,20 @@ nav a {
 
 nav a:hover {
   text-decoration:
+
+/* ===== Navigatie verfijning ===== */
+nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  font-size: 0.95rem;
+}
+
+hr {
+  display: none;
+}
