@@ -3,87 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <title>Trainingen – TrainerBjorn</title>
-  <link rel="stylesheet" href="/css/trainerbjorn.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- JUISTE CSS -->
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 
-  <section class="section">
-    <div class="container">
-      <h1>Trainingen</h1>
-      <p class="text-muted">
-        Praktisch, begrijpelijk en direct toepasbaar.
-      </p>
-
-      <p>
-        De trainingen van TrainerBjorn zijn modulair opgezet.
-        Sommige worden periodiek aangeboden, andere op aanvraag.
-        Altijd met de focus op begrijpen → toepassen → zelfstandig verder kunnen.
-      </p>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="container">
-      <h2>Beschikbare onderwerpen</h2>
-
-      <div class="card">
-        <h3>Power BI – van chaos naar model</h3>
-        <p>
-          Waarom zijn sommige dashboards traag?
-          Hoe voorkom je dat je model onnodig complex wordt?
-          En hoe bouw je iets dat ook over een jaar nog te begrijpen is?
-        </p>
-        <a href="#" class="btn btn-secondary">Interesse?</a>
+  <!-- =====================
+       HEADER + NAVIGATIE
+       ===================== -->
+  <header>
+    <nav class="nav">
+      <a href="/" class="nav-title">TrainerBjorn</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/trainingen.html">Trainingen</a>
+        <a href="/over-mij.html">Over mij</a>
       </div>
+    </nav>
+  </header>
 
-      <div class="card">
-        <h3>Microsoft Fabric – wanneer wel, wanneer niet</h3>
-        <p>
-          Fabric kan veel, maar niet alles is altijd nodig.
-          In deze training kijken we naar architectuurkeuzes,
-          kosten, performance en governance.
+  <main>
+
+    <!-- =====================
+         INTRO
+         ===================== -->
+    <section class="section">
+      <div class="container">
+        <h1>Trainingen</h1>
+
+        <p class="text-muted">
+          Praktisch, begrijpelijk en direct toepasbaar.
         </p>
-        <a href="#" class="btn btn-secondary">Interesse?</a>
-      </div>
 
-      <div class="card">
-        <h3>Datamodellering</h3>
         <p>
-          Feiten, dimensies, granularity en definities.
-          Niet als theorieblok, maar gekoppeld aan herkenbare use-cases.
+          De trainingen van TrainerBjorn zijn gericht op professionals
+          die met Microsoft data-tools werken
+          en willen begrijpen <em>waarom</em> dingen werken zoals ze werken.
         </p>
-        <a href="#" class="btn btn-secondary">Interesse?</a>
+
+        <p>
+          Geen standaardverhaal, geen one-size-fits-all,
+          maar uitleg die aansluit op jouw praktijk.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Open trainingen & planning</h2>
+    <!-- =====================
+         TRAININGEN OP AANVRAAG
+         ===================== -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2>Trainingen op aanvraag</h2>
 
-      <p>
-        Open trainingen worden gepland zodra er voldoende interesse is,
-        of op vooraf aangekondigde momenten.
-      </p>
+        <p>
+          Deze trainingen worden regelmatig gegeven,
+          maar niet vast ingepland.
+          Ze zijn geschikt voor teams of kleine groepen
+          en worden afgestemd op het niveau en de context.
+        </p>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Datum</th>
-            <th>Training</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>—</td>
-            <td>Power BI Basis</td>
-            <td>Interesse peilen</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+        <div class="card fade-in">
+          <h3>Power BI – van chaos naar model</h3>
+          <p>
+            Waarom zijn dashboards traag?
+            Hoe voorkom je dat een model onnodig complex wordt?
+            En hoe bouw je iets dat ook over een jaar nog te begrijpen is?
+          </p>
+          <a href="#" class="btn btn-secondary">Interesse?</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Microsoft Fabric – wanneer wel, wanneer niet</h3>
+          <p>
+            Fabric biedt veel mogelijkheden,
+            maar niet elke architectuur is altijd de juiste.
+            We kijken naar kosten, performance,
+            governance en onderhoudbaarheid.
+          </p>
+          <a href="#" class="btn btn-secondary">Interesse?</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Datamodellering</h3>
+          <p>
+            Feiten, dimensies, granularity en definities —
+            gekoppeld aan herkenbare use-cases
+            in plaats van losse theorie.
+          </p>
+          <a href="#" class="btn btn-secondary">Interesse?</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         OPEN TRAININGEN
+         ===================== -->
+    <section class="section">
+      <div class="container">
+        <h2>Open trainingen</h2>
+
+        <p>
+          Open trainingen worden periodiek georganiseerd
+          zodra er voldoende interesse is
+          of op vooraf aangekondigde momenten.
+        </p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Datum</th>
+              <th>Training</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>—</td>
+              <td>Power BI Basis</td>
+              <td>Interesse peilen</td>
+            </tr>
+            <tr>
+              <td>—</td>
+              <td>Datamodellering</td>
+              <td>Interesse peilen</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =====================
+         EXAMENVOORBEREIDING
+         ===================== -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2>Examenvoorbereiding</h2>
+
+        <div class="card fade-in">
+          <p>
+            Voor Microsoft-examens zoals Power BI,
+            Fabric en Azure Fundamentals.
+          </p>
+
+          <p>
+            Geen examendrill of vragen stampen,
+            maar begrijpen wat je doet —
+            zodat je niet alleen slaagt,
+            maar ook weet waarom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         AFSLUITING
+         ===================== -->
+    <section class="section">
+      <div class="container">
+        <h2>Interesse of vragen?</h2>
+
+        <p>
+          Twijfel je of een training past bij jouw situatie,
+          of wil je iets bespreken?
+          Neem gerust contact op —
+          dan kijken we samen wat logisch is.
+        </p>
+
+        <a href="/over-mij.html" class="btn btn-primary">
+          Meer over mijn aanpak
+        </a>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
