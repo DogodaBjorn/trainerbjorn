@@ -1,47 +1,40 @@
 /* ======================================================
-   TrainerBjorn CSS Framework
-   Fase 2 – Structuur & Stijl
+   TrainerBjorn CSS
+   Filosofie: notebook, rust, didactiek
+   Mobile-first, geen legacy
    ====================================================== */
 
+
 /* =====================
-   1. Design Tokens
+   1. Design tokens
    ===================== */
 
 :root {
-  --color-bg-main: #f7f8f9;
-  --color-bg-alt: #ffffff;
-  --color-bg-soft: #eef1f3;
+  --bg-page: #f7f8f9;
+  --bg-paper: #ffffff;
 
-  --color-text-main: #1f2933;
-  --color-text-muted: #6b7280;
+  --text-main: #1f2933;
+  --text-muted: #6b7280;
 
-  --color-accent-primary: #0ea5a4;
-  --color-accent-secondary: #f59e0b;
-  --color-accent-soft: #d1faf5;
+  --border-light: rgba(0, 0, 0, 0.08);
 
-  --color-border-light: #e5e7eb;
-  --color-border-accent: rgba(14, 165, 164, 0.4);
+  --accent: #0ea5a4;
 
   --font-base: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, monospace;
 
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 32px;
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 36px;
   --space-xl: 64px;
 
-  --radius-sm: 4px;
-  --radius-md: 8px;
-
-  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.06);
-
-  --transition-fast: 0.15s ease-out;
-  --transition-base: 0.25s ease-out;
+  --radius-paper: 6px;
 }
 
+
 /* =====================
-   2. Reset & Base
+   2. Reset & base
    ===================== */
 
 *,
@@ -53,245 +46,55 @@
 body {
   margin: 0;
   font-family: var(--font-base);
-  color: var(--color-text-main);
-  background-color: var(--color-bg-main);
-  line-height: 1.6;
+  color: var(--text-main);
+  background: var(--bg-page);
+  line-height: 1.65;
 }
-
-/* =====================
-   3. Header & Navigatie
-   ===================== */
-
-header {
-  background-color: var(--color-bg-alt);
-  border-bottom: 1px solid var(--color-border-light);
-}
-
-.nav {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: var(--space-md);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-title {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-text-main);
-}
-
-.nav-links {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: var(--color-accent-primary);
-}
-
-/* =====================
-   4. Layout
-   ===================== */
-
-main {
-  display: block;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: var(--space-lg) var(--space-md);
-}
-
-.section {
-  padding: var(--space-xl) 0;
-}
-
-.section--soft {
-  background-color: var(--color-bg-soft);
-}
-
-/* =====================
-   5. Typography
-   ===================== */
-
-h1, h2, h3 {
-  font-weight: 600;
-  line-height: 1.3;
-  margin-top: 0;
-}
-
-h1 {
-  font-size: 2.2rem;
-}
-
-h2 {
-  font-size: 1.7rem;
-  margin-bottom: var(--space-md);
-}
-
-h3 {
-  font-size: 1.3rem;
-}
-
-p {
-  margin-bottom: var(--space-md);
-}
-
-.text-muted {
-  color: var(--color-text-muted);
-}
-
-.code-inline {
-  font-family: var(--font-mono);
-  background-color: var(--color-bg-soft);
-  padding: 2px 6px;
-  border-radius: var(--radius-sm);
-}
-
-/* =====================
-   6. Buttons
-   ===================== */
-
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: var(--radius-md);
-  border: 1px solid transparent;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color var(--transition-base),
-              transform var(--transition-fast);
-}
-
-.btn-primary {
-  background-color: var(--color-accent-primary);
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  transform: translateY(-1px);
-  background-color: #0d9488;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  border-color: var(--color-border-accent);
-  color: var(--color-accent-primary);
-}
-
-/* =====================
-   7. Cards
-   ===================== */
-
-.card {
-  background-color: var(--color-bg-alt);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--color-border-light);
-}
-
-.card + .card {
-  margin-top: var(--space-md);
-}
-
-/* =====================
-   8. Tables
-   ===================== */
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: var(--color-bg-alt);
-}
-
-.table th,
-.table td {
-  padding: var(--space-sm) var(--space-md);
-  border-bottom: 1px solid var(--color-border-light);
-  text-align: left;
-}
-
-.table th {
-  background-color: var(--color-bg-soft);
-  font-weight: 600;
-}
-
-/* =====================
-   9. Micro animations
-   ===================== */
-
-.fade-in {
-  animation: fadeIn 0.4s ease-out both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* ======================================================
-   TrainerBjorn 2.0 – Design Layer
-   Doel: rust, orde, didactiek
-   Plaatsen: ONDER bestaande CSS
-   ====================================================== */
 
 
 /* =====================
-   1. Page / notitieblad
+   3. Page = notebook
    ===================== */
 
 .page {
-  max-width: 960px;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 4rem 1.5rem 6rem;
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+  background: var(--bg-paper);
+  border-radius: var(--radius-paper);
+  border: 1px solid var(--border-light);
 }
 
 
 /* =====================
-   2. Hero – openingsblad
+   4. Hero (opening page)
    ===================== */
 
 .hero {
-  padding: 6rem 0 5rem;
-  margin-bottom: 5rem;
+  padding-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-light);
 }
 
-.hero .heading-primary {
-  max-width: 640px;
-  margin-bottom: 1.5rem;
+.heading-primary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 var(--space-sm);
 }
 
 .hero .text-body {
-  max-width: 520px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 3rem;
+  max-width: 36rem;
 }
 
 
 /* =====================
-   3. Sections – basis
+   5. Sections = pages
    ===================== */
 
 .section {
-  margin-bottom: 5rem;
+  padding-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .section:last-child {
@@ -300,81 +103,61 @@ p {
 
 
 /* =====================
-   4. Section modifiers
+   6. Section roles
    ===================== */
 
-/* Intro / Context */
 .section--intro {
-  padding-top: 0;
+  padding-top: var(--space-md);
 }
 
-/* Uitleg / Verdieping */
-.section--explain {
-  max-width: 720px;
-}
-
-/* Structuur / Overzicht */
-.section--structure {
-  max-width: 720px;
-}
-
-/* Aanbod / Training */
+.section--explain,
+.section--structure,
 .section--offer {
-  max-width: 720px;
-  padding-top: 2rem;
+  max-width: 42rem;
 }
 
-/* Insight / Reflectie */
 .section--insight {
-  max-width: 640px;
-  padding-top: 3rem;
-  margin-top: 6rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  max-width: 36rem;
+  padding-top: var(--space-lg);
+  border-top: 1px dashed var(--border-light);
 }
 
 
 /* =====================
-   5. Typografie-rollen
+   7. Typography
    ===================== */
 
-.heading-primary {
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
 .heading-secondary {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin: 0 0 var(--space-sm);
 }
 
 .text-body {
   font-size: 1rem;
-  line-height: 1.65;
-  margin-bottom: 1.4rem;
+  margin: 0 0 var(--space-md);
 }
 
 .text-subtle {
   font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.6);
-  margin-top: 2rem;
+  color: var(--text-muted);
+  margin-top: var(--space-md);
 }
 
 
 /* =====================
-   6. Structuur-lijsten
+   8. Lists (structure)
    ===================== */
 
 .structure-list {
   list-style: none;
   padding: 0;
-  margin: 2rem 0 0;
+  margin: var(--space-md) 0 0;
 }
 
 .structure-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .structure-list li:last-child {
@@ -383,100 +166,55 @@ p {
 
 
 /* =====================
-   7. Schets – basis
+   9. Sketch placeholders
    ===================== */
 
 .sketch {
-  position: relative;
-  margin: 3rem 0;
-  height: 120px;
-  max-width: 420px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin: var(--space-lg) 0;
+  height: 110px;
+  max-width: 360px;
+  border: 1px dashed var(--border-light);
+  border-radius: 4px;
 }
 
 
 /* =====================
-   8. Schets types
+   10. Mobile refinement
    ===================== */
 
-/* Assenstelsel */
-.sketch--axis::before,
-.sketch--axis::after {
-  content: "";
-  position: absolute;
-  background: rgba(0, 0, 0, 0.25);
-}
+@media (max-width: 600px) {
 
-.sketch--axis::before {
-  left: 12%;
-  top: 10%;
-  width: 1px;
-  height: 80%;
-}
+  .page {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
 
-.sketch--axis::after {
-  bottom: 20%;
-  left: 10%;
-  height: 1px;
-  width: 80%;
-}
+  .heading-primary {
+    font-size: 1.5rem;
+  }
 
+  .section {
+    margin-bottom: var(--space-lg);
+  }
 
-/* Blokdiagram */
-.sketch--blocks::before,
-.sketch--blocks::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.sketch--blocks::before {
-  top: 25%;
-  left: 10%;
-  width: 30%;
-  height: 40%;
-}
-
-.sketch--blocks::after {
-  top: 25%;
-  right: 10%;
-  width: 30%;
-  height: 40%;
+  .sketch {
+    height: 90px;
+  }
 }
 
 
-/* Flowlijn */
-.sketch--flow::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 70%;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.25);
-}
+/* =====================
+   11. Desktop refinement
+   ===================== */
 
+@media (min-width: 900px) {
 
-/* Datalaag / Systeem */
-.sketch--system {
-  height: 140px;
-}
+  .heading-primary {
+    font-size: 2.2rem;
+  }
 
-.sketch--system::before,
-.sketch--system::after {
-  content: "";
-  position: absolute;
-  left: 20%;
-  width: 60%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.sketch--system::before {
-  top: 25%;
-  height: 30%;
-}
-
-.sketch--system::after {
-  top: 60%;
-  height: 20%;
+  .section {
+    padding-top: var(--space-xl);
+  }
 }
