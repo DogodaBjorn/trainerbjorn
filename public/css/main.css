@@ -1,6 +1,6 @@
 /* ======================================================
    TrainerBjorn CSS
-   Notebook-concept – definitieve basis
+   Notebook-concept – fijn-afgesteld (2.1)
    ====================================================== */
 
 
@@ -16,24 +16,25 @@
   --text-muted: #6b7280;
 
   --border-light: rgba(0, 0, 0, 0.08);
-  --line-vertical: rgba(0, 0, 0, 0.06);
-  --line-horizontal: rgba(0, 0, 0, 0.035);
+  --line-vertical: rgba(0, 0, 0, 0.07);
+  --line-horizontal: rgba(0, 0, 0, 0.04);
 
-  --shadow-paper: 0 6px 18px rgba(0, 0, 0, 0.04);
+  --shadow-paper: 0 5px 14px rgba(0, 0, 0, 0.045);
 
   --font-base: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
 
   --space-xs: 6px;
   --space-sm: 12px;
-  --space-md: 20px;
-  --space-lg: 36px;
-  --space-xl: 64px;
+  --space-md: 18px;
+  --space-lg: 32px;
+  --space-xl: 56px;
 
   --radius-paper: 8px;
 
-  /* Notebook grammar */
-  --notebook-line-top: 96px;
-  --notebook-content-offset: 20px;
+  /* Notebook grammar (desktop default) */
+  --notebook-line-top: 88px;
+  --notebook-content-offset: 16px;
+  --notebook-binding-left: 28px;
 }
 
 
@@ -52,7 +53,7 @@ body {
   font-family: var(--font-base);
   color: var(--text-main);
   background: var(--bg-canvas);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 
@@ -63,7 +64,7 @@ body {
 .page {
   position: relative;
   max-width: 920px;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   padding: var(--space-xl) var(--space-md) var(--space-xl);
   background: var(--bg-paper);
   border-radius: var(--radius-paper);
@@ -73,22 +74,22 @@ body {
 
 
 /* =====================
-   4. Notebook binding
+   4. Notebook binding lines
    ===================== */
 
-/* Vertical binding line */
+/* Vertical binding */
 .page::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 16px;
+  left: var(--notebook-binding-left);
   width: 2px;
   background: var(--line-vertical);
   pointer-events: none;
 }
 
-/* Horizontal start line */
+/* Horizontal writing line */
 .page::after {
   content: "";
   position: absolute;
@@ -102,7 +103,7 @@ body {
 
 
 /* =====================
-   5. Hero (content starts AFTER line)
+   5. Hero (starts after line)
    ===================== */
 
 .hero {
@@ -112,7 +113,7 @@ body {
 }
 
 .heading-primary {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.25;
   margin: 0 0 var(--space-sm);
@@ -163,7 +164,7 @@ body {
    ===================== */
 
 .heading-secondary {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin: 0 0 var(--space-sm);
 }
@@ -206,8 +207,8 @@ body {
 
 .sketch {
   margin: var(--space-lg) 0;
-  height: 110px;
-  max-width: 360px;
+  height: 100px;
+  max-width: 340px;
   border: 1px dashed var(--border-light);
   border-radius: 4px;
 }
@@ -217,25 +218,31 @@ body {
    11. Breakpoints
    ===================== */
 
-/* Mobile */
+/* Mobile: klein notitieblokje */
 @media (max-width: 600px) {
 
   :root {
-    --notebook-line-top: 108px;
-    --notebook-content-offset: 16px;
+    --notebook-line-top: 76px;
+    --notebook-content-offset: 12px;
+    --notebook-binding-left: 20px;
   }
 
   .page {
-    margin: 0.75rem;
+    margin: 0.6rem;
     padding: var(--space-lg) var(--space-md) var(--space-lg);
+    border-radius: 10px;
   }
 
   .heading-primary {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+  }
+
+  .section {
+    margin-bottom: var(--space-lg);
   }
 
   .sketch {
-    height: 90px;
+    height: 86px;
   }
 }
 
@@ -244,8 +251,9 @@ body {
 @media (min-width: 768px) {
 
   :root {
-    --notebook-line-top: 96px;
-    --notebook-content-offset: 20px;
+    --notebook-line-top: 88px;
+    --notebook-content-offset: 16px;
+    --notebook-binding-left: 28px;
   }
 
   .page {
@@ -253,7 +261,7 @@ body {
   }
 
   .page::before {
-    left: 32px;
+    left: var(--notebook-binding-left);
   }
 }
 
@@ -262,7 +270,7 @@ body {
 @media (min-width: 900px) {
 
   .heading-primary {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .section {
