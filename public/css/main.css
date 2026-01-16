@@ -1,6 +1,6 @@
 /* ======================================================
    TrainerBjorn CSS
-   Notebook concept – definitieve uitlijning
+   Notebook-concept – definitieve basis
    ====================================================== */
 
 
@@ -31,8 +31,9 @@
 
   --radius-paper: 8px;
 
-  /* notebook grammar */
-  --notebook-line-top: 84px; /* default (mobile) */
+  /* Notebook grammar */
+  --notebook-line-top: 96px;
+  --notebook-content-offset: 20px;
 }
 
 
@@ -75,6 +76,7 @@ body {
    4. Notebook binding
    ===================== */
 
+/* Vertical binding line */
 .page::before {
   content: "";
   position: absolute;
@@ -86,6 +88,7 @@ body {
   pointer-events: none;
 }
 
+/* Horizontal start line */
 .page::after {
   content: "";
   position: absolute;
@@ -99,10 +102,11 @@ body {
 
 
 /* =====================
-   5. Hero
+   5. Hero (content starts AFTER line)
    ===================== */
 
 .hero {
+  padding-top: calc(var(--notebook-line-top) + var(--notebook-content-offset));
   padding-bottom: var(--space-lg);
   margin-bottom: var(--space-lg);
 }
@@ -217,7 +221,8 @@ body {
 @media (max-width: 600px) {
 
   :root {
-    --notebook-line-top: 104px;
+    --notebook-line-top: 108px;
+    --notebook-content-offset: 16px;
   }
 
   .page {
@@ -234,11 +239,13 @@ body {
   }
 }
 
+
 /* Tablet */
 @media (min-width: 768px) {
 
   :root {
-    --notebook-line-top: 92px;
+    --notebook-line-top: 96px;
+    --notebook-content-offset: 20px;
   }
 
   .page {
@@ -250,12 +257,9 @@ body {
   }
 }
 
+
 /* Large desktop */
 @media (min-width: 900px) {
-
-  :root {
-    --notebook-line-top: 96px;
-  }
 
   .heading-primary {
     font-size: 2.2rem;
