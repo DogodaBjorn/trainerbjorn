@@ -21,7 +21,6 @@
   --accent: #0ea5a4;
 
   --font-base: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', Consolas, monospace;
 
   --space-xs: 6px;
   --space-sm: 12px;
@@ -57,6 +56,7 @@ body {
    ===================== */
 
 .page {
+  position: relative;
   max-width: 920px;
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md) var(--space-xl);
@@ -67,7 +67,37 @@ body {
 
 
 /* =====================
-   4. Hero (opening page)
+   4. Notebook-as (binding)
+   Desktop & mobiel varianten
+   ===================== */
+
+/* Mobiel: lichte referentie */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+}
+
+/* Tablet & desktop: meer ademruimte */
+@media (min-width: 768px) {
+  .page {
+    padding-left: calc(var(--space-xl) + 12px);
+  }
+
+  .page::before {
+    left: 32px;
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
+
+
+/* =====================
+   5. Hero (opening page)
    ===================== */
 
 .hero {
@@ -89,7 +119,7 @@ body {
 
 
 /* =====================
-   5. Sections = pages
+   6. Sections = pages
    ===================== */
 
 .section {
@@ -103,7 +133,7 @@ body {
 
 
 /* =====================
-   6. Section roles
+   7. Section roles
    ===================== */
 
 .section--intro {
@@ -124,7 +154,7 @@ body {
 
 
 /* =====================
-   7. Typography
+   8. Typography
    ===================== */
 
 .heading-secondary {
@@ -146,7 +176,7 @@ body {
 
 
 /* =====================
-   8. Lists (structure)
+   9. Lists (structure)
    ===================== */
 
 .structure-list {
@@ -166,7 +196,7 @@ body {
 
 
 /* =====================
-   9. Sketch placeholders
+   10. Sketch placeholders
    ===================== */
 
 .sketch {
@@ -175,29 +205,6 @@ body {
   max-width: 360px;
   border: 1px dashed var(--border-light);
   border-radius: 4px;
-}
-
-
-/* =====================
-   10. Notebook-as (binding)
-   ===================== */
-
-@media (min-width: 768px) {
-  .page {
-    position: relative;
-    padding-left: calc(var(--space-xl) + 12px);
-  }
-
-  .page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 32px;
-    width: 1px;
-    background: rgba(0, 0, 0, 0.06);
-    pointer-events: none;
-  }
 }
 
 
