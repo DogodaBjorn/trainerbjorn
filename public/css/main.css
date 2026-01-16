@@ -1,7 +1,6 @@
 /* ======================================================
    TrainerBjorn CSS
    Filosofie: notebook, rust, didactiek
-   Mobile-first, schoon en uitbreidbaar
    ====================================================== */
 
 
@@ -10,15 +9,15 @@
    ===================== */
 
 :root {
-  --bg-page: #f7f8f9;
+  --bg-canvas: #f4f6f7;
   --bg-paper: #ffffff;
 
   --text-main: #1f2933;
   --text-muted: #6b7280;
 
   --border-light: rgba(0, 0, 0, 0.08);
-
-  --accent: #0ea5a4;
+  --line-vertical: rgba(0, 0, 0, 0.06);
+  --line-horizontal: rgba(0, 0, 0, 0.035);
 
   --font-base: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
 
@@ -46,7 +45,7 @@ body {
   margin: 0;
   font-family: var(--font-base);
   color: var(--text-main);
-  background: var(--bg-page);
+  background: var(--bg-canvas);
   line-height: 1.65;
 }
 
@@ -58,8 +57,8 @@ body {
 .page {
   position: relative;
   max-width: 920px;
-  margin: 0 auto;
-  padding: var(--space-lg) var(--space-md) var(--space-xl);
+  margin: 2rem auto;
+  padding: var(--space-xl) var(--space-md) var(--space-xl);
   background: var(--bg-paper);
   border-radius: var(--radius-paper);
   border: 1px solid var(--border-light);
@@ -67,37 +66,57 @@ body {
 
 
 /* =====================
-   4. Notebook-as (binding)
-   Desktop & mobiel varianten
+   4. Notebook binding lines
    ===================== */
 
-/* Mobiel: lichte referentie */
+/* Vertical binding */
 .page::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 12px;
-  width: 1px;
-  background: rgba(0, 0, 0, 0.04);
+  left: 16px;
+  width: 2px;
+  background: var(--line-vertical);
   pointer-events: none;
 }
 
-/* Tablet & desktop: meer ademruimte */
+/* Horizontal start line */
+.page::after {
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line-horizontal);
+  pointer-events: none;
+}
+
+
+/* =====================
+   5. Desktop refinement
+   ===================== */
+
 @media (min-width: 768px) {
+
   .page {
-    padding-left: calc(var(--space-xl) + 12px);
+    padding-left: calc(var(--space-xl) + 24px);
   }
 
   .page::before {
     left: 32px;
-    background: rgba(0, 0, 0, 0.06);
+    width: 2px;
+  }
+
+  .page::after {
+    top: 56px;
   }
 }
 
 
 /* =====================
-   5. Hero (opening page)
+   6. Hero
    ===================== */
 
 .hero {
@@ -119,7 +138,7 @@ body {
 
 
 /* =====================
-   6. Sections = pages
+   7. Sections
    ===================== */
 
 .section {
@@ -130,11 +149,6 @@ body {
 .section:last-child {
   margin-bottom: 0;
 }
-
-
-/* =====================
-   7. Section roles
-   ===================== */
 
 .section--intro {
   padding-top: var(--space-md);
@@ -176,7 +190,7 @@ body {
 
 
 /* =====================
-   9. Lists (structure)
+   9. Lists
    ===================== */
 
 .structure-list {
@@ -215,6 +229,7 @@ body {
 @media (max-width: 600px) {
 
   .page {
+    margin: 0;
     border-radius: 0;
     border-left: none;
     border-right: none;
@@ -235,7 +250,7 @@ body {
 
 
 /* =====================
-   12. Desktop refinement
+   12. Large desktop
    ===================== */
 
 @media (min-width: 900px) {
