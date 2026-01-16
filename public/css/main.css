@@ -1,7 +1,7 @@
 /* ======================================================
    TrainerBjorn CSS
    Filosofie: notebook, rust, didactiek
-   Mobile-first, geen legacy
+   Mobile-first, schoon en uitbreidbaar
    ====================================================== */
 
 
@@ -179,7 +179,30 @@ body {
 
 
 /* =====================
-   10. Mobile refinement
+   10. Notebook-as (binding)
+   ===================== */
+
+@media (min-width: 768px) {
+  .page {
+    position: relative;
+    padding-left: calc(var(--space-xl) + 12px);
+  }
+
+  .page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 32px;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.06);
+    pointer-events: none;
+  }
+}
+
+
+/* =====================
+   11. Mobile refinement
    ===================== */
 
 @media (max-width: 600px) {
@@ -205,7 +228,7 @@ body {
 
 
 /* =====================
-   11. Desktop refinement
+   12. Desktop refinement
    ===================== */
 
 @media (min-width: 900px) {
@@ -216,27 +239,5 @@ body {
 
   .section {
     padding-top: var(--space-xl);
-  }
-}
-
-/* ======================================================
-   Notebook-as (abstracte binding)
-   Inspiratie: ringband zonder letterlijke vorm
-   ====================================================== */
-
-@media (min-width: 768px) {
-  .page {
-    position: relative;
-  }
-
-  .page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 28px;               /* niet exact aan de rand */
-    width: 1px;
-    background: rgba(0, 0, 0, 0.06);
-    pointer-events: none;
   }
 }
