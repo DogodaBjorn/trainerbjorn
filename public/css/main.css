@@ -1,6 +1,6 @@
 /* ======================================================
    TrainerBjorn CSS
-   Filosofie: notebook, rust, didactiek
+   Notebook concept – definitieve uitlijning
    ====================================================== */
 
 
@@ -30,6 +30,9 @@
   --space-xl: 64px;
 
   --radius-paper: 8px;
+
+  /* notebook grammar */
+  --notebook-line-top: 84px; /* default (mobile) */
 }
 
 
@@ -69,10 +72,9 @@ body {
 
 
 /* =====================
-   4. Notebook binding lines
+   4. Notebook binding
    ===================== */
 
-/* Vertical binding */
 .page::before {
   content: "";
   position: absolute;
@@ -84,11 +86,10 @@ body {
   pointer-events: none;
 }
 
-/* Horizontal start line */
 .page::after {
   content: "";
   position: absolute;
-  top: 52px;
+  top: var(--notebook-line-top);
   left: 0;
   right: 0;
   height: 1px;
@@ -98,33 +99,12 @@ body {
 
 
 /* =====================
-   5. Desktop refinement
-   ===================== */
-
-@media (min-width: 768px) {
-
-  .page {
-    padding-left: calc(var(--space-xl) + 24px);
-  }
-
-  .page::before {
-    left: 32px;
-  }
-
-  .page::after {
-    top: 56px;
-  }
-}
-
-
-/* =====================
-   6. Hero
+   5. Hero
    ===================== */
 
 .hero {
   padding-bottom: var(--space-lg);
   margin-bottom: var(--space-lg);
-  border-bottom: 1px solid var(--border-light);
 }
 
 .heading-primary {
@@ -140,7 +120,7 @@ body {
 
 
 /* =====================
-   7. Sections
+   6. Sections
    ===================== */
 
 .section {
@@ -151,6 +131,11 @@ body {
 .section:last-child {
   margin-bottom: 0;
 }
+
+
+/* =====================
+   7. Section roles
+   ===================== */
 
 .section--intro {
   padding-top: var(--space-md);
@@ -225,23 +210,23 @@ body {
 
 
 /* =====================
-   11. Mobile refinement
+   11. Breakpoints
    ===================== */
 
+/* Mobile */
 @media (max-width: 600px) {
+
+  :root {
+    --notebook-line-top: 104px;
+  }
 
   .page {
     margin: 0.75rem;
     padding: var(--space-lg) var(--space-md) var(--space-lg);
-    border-radius: 10px;
   }
 
   .heading-primary {
     font-size: 1.5rem;
-  }
-
-  .section {
-    margin-bottom: var(--space-lg);
   }
 
   .sketch {
@@ -249,12 +234,28 @@ body {
   }
 }
 
+/* Tablet */
+@media (min-width: 768px) {
 
-/* =====================
-   12. Large desktop
-   ===================== */
+  :root {
+    --notebook-line-top: 92px;
+  }
 
+  .page {
+    padding-left: calc(var(--space-xl) + 24px);
+  }
+
+  .page::before {
+    left: 32px;
+  }
+}
+
+/* Large desktop */
 @media (min-width: 900px) {
+
+  :root {
+    --notebook-line-top: 96px;
+  }
 
   .heading-primary {
     font-size: 2.2rem;
