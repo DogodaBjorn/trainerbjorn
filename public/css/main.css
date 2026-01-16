@@ -218,3 +218,25 @@ body {
     padding-top: var(--space-xl);
   }
 }
+
+/* ======================================================
+   Notebook-as (abstracte binding)
+   Inspiratie: ringband zonder letterlijke vorm
+   ====================================================== */
+
+@media (min-width: 768px) {
+  .page {
+    position: relative;
+  }
+
+  .page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 28px;               /* niet exact aan de rand */
+    width: 1px;
+    background: rgba(0, 0, 0, 0.06);
+    pointer-events: none;
+  }
+}
