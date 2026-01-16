@@ -19,6 +19,8 @@
   --line-vertical: rgba(0, 0, 0, 0.06);
   --line-horizontal: rgba(0, 0, 0, 0.035);
 
+  --shadow-paper: 0 6px 18px rgba(0, 0, 0, 0.04);
+
   --font-base: 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
 
   --space-xs: 6px;
@@ -27,7 +29,7 @@
   --space-lg: 36px;
   --space-xl: 64px;
 
-  --radius-paper: 6px;
+  --radius-paper: 8px;
 }
 
 
@@ -62,6 +64,7 @@ body {
   background: var(--bg-paper);
   border-radius: var(--radius-paper);
   border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-paper);
 }
 
 
@@ -85,7 +88,7 @@ body {
 .page::after {
   content: "";
   position: absolute;
-  top: 48px;
+  top: 52px;
   left: 0;
   right: 0;
   height: 1px;
@@ -106,7 +109,6 @@ body {
 
   .page::before {
     left: 32px;
-    width: 2px;
   }
 
   .page::after {
@@ -229,10 +231,9 @@ body {
 @media (max-width: 600px) {
 
   .page {
-    margin: 0;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
+    margin: 0.75rem;
+    padding: var(--space-lg) var(--space-md) var(--space-lg);
+    border-radius: 10px;
   }
 
   .heading-primary {
