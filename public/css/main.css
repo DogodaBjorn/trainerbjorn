@@ -1,13 +1,11 @@
 /* ======================================================
-   TrainerBjorn CSS
-   Notebook + Didactische section-grammatica (2.0)
+   TrainerBjorn – Unified CSS Framework
+   Notebook metafoor + didactische section-grammatica
    ====================================================== */
-
 
 /* =====================
    1. Design tokens
    ===================== */
-
 :root {
   --bg-canvas: #f4f6f7;
   --bg-paper: #ffffff;
@@ -34,21 +32,17 @@
 
   --radius-paper: 8px;
 
-  /* Notebook grammar */
+  /* Notebook geometry */
   --notebook-line-top: 84px;
   --notebook-content-offset: 20px;
   --notebook-binding-left: 28px;
   --notebook-content-left: 32px;
 }
 
-
 /* =====================
    2. Reset & base
    ===================== */
-
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -60,11 +54,9 @@ body {
   line-height: 1.65;
 }
 
-
 /* =====================
-   3. Page = notebook
+   3. Page (notebook)
    ===================== */
-
 .page {
   position: relative;
   max-width: 920px;
@@ -80,11 +72,7 @@ body {
   box-shadow: var(--shadow-paper);
 }
 
-
-/* =====================
-   4. Notebook lines
-   ===================== */
-
+/* Notebook lines */
 .page::before {
   content: "";
   position: absolute;
@@ -107,15 +95,9 @@ body {
   pointer-events: none;
 }
 
-
 /* =====================
-   5. Hero / page opening
+   4. Typography
    ===================== */
-
-.hero {
-  margin-bottom: var(--space-xl);
-}
-
 .heading-primary {
   font-size: 1.7rem;
   font-weight: 600;
@@ -123,15 +105,32 @@ body {
   margin: 0 0 var(--space-md);
 }
 
+.heading-secondary {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+}
+
+.text-body {
+  font-size: 1rem;
+  margin: 0 0 var(--space-md);
+  max-width: 42rem;
+}
+
+/* =====================
+   5. Hero
+   ===================== */
+.hero {
+  margin-bottom: var(--space-xl);
+}
+
 .hero .text-body {
   max-width: 38rem;
 }
 
-
 /* =====================
-   6. Section base
+   6. Sections (base)
    ===================== */
-
 .section {
   margin-block: var(--space-xl);
 }
@@ -144,90 +143,36 @@ body {
   margin-bottom: 0;
 }
 
-
 /* =====================
-   7. Section-types (normerend)
+   7. Section-types
    ===================== */
-
-/* Intro / Context */
-.section-intro {
+.section--intro {
   margin-block: calc(var(--space-xl) + var(--space-sm));
 }
 
-.section-intro .heading-primary,
-.section-intro .heading-secondary {
-  margin-bottom: var(--space-md);
-}
-
-/* Uitleg / Verdieping */
-.section-explanation {
+.section--explain {
   margin-block: var(--space-lg);
 }
 
-/* Structuur / Overzicht */
-.section-structure {
+.section--structure {
   margin-block: var(--space-xl);
   padding-top: var(--space-sm);
   border-top: 1px solid var(--border-light);
 }
 
-/* Aanbod / Uitnodiging */
-.section-invitation {
+.section--offer {
   margin-block: var(--space-xl);
 }
 
-/* Insight / Reflectie */
-.section-insight {
+.section--insight {
   margin-block: calc(var(--space-xl) + var(--space-md));
   padding-top: var(--space-lg);
   background: var(--bg-soft);
 }
 
-
 /* =====================
-   8. Typography
+   8. Lists
    ===================== */
-
-.heading-secondary {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0 0 var(--space-sm);
-}
-
-.heading-tertiary {
-  font-size: 1rem;
-  font-weight: 500;
-  margin: var(--space-md) 0 var(--space-xs);
-}
-
-.text-body {
-  font-size: 1rem;
-  margin: 0 0 var(--space-md);
-  max-width: 42rem;
-}
-
-.intro-text {
-  font-size: 1.05rem;
-  margin-bottom: var(--space-lg);
-}
-
-.theme-sub {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-top: var(--space-xs);
-}
-
-.insight-text {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  max-width: 46rem;
-}
-
-
-/* =====================
-   9. Lists (structuur)
-   ===================== */
-
 .structure-list {
   list-style: none;
   padding: 0;
@@ -243,30 +188,19 @@ body {
   border-bottom: none;
 }
 
-
 /* =====================
-   10. Links & uitnodiging
+   9. Links
    ===================== */
-
 a {
   color: inherit;
-}
-
-.text-link {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 
-.text-link:hover {
-  text-decoration-thickness: 2px;
-}
-
-
 /* =====================
-   11. Sketch placeholders
+   10. Sketch placeholders
    ===================== */
-
 .sketch {
   margin: var(--space-lg) 0;
   height: 100px;
@@ -275,13 +209,10 @@ a {
   border-radius: 4px;
 }
 
-
 /* =====================
-   12. Responsive
+   11. Responsive
    ===================== */
-
 @media (max-width: 600px) {
-
   :root {
     --notebook-line-top: 72px;
     --notebook-content-offset: 16px;
