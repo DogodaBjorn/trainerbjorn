@@ -52,21 +52,22 @@ body {
    2a. Logo-plaatsing
    ===================== */
 
-/* Basis logo */
+/* Basis logo (blok voor inner pages) */
 .logo {
   display: block;
   max-width: 220px;
 }
 
-/* --- HOME: logo als speels header-element --- */
-
+/* --- HOME: logo INLINE met heading --- */
 .page.home .logo-home {
-  margin-top: 12px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 8px;
   transform: translateY(4px);
+  max-width: 200px;
 }
 
-/* --- INNER: logo op notebook --- */
-
+/* --- INNER: logo rechtsboven op notebook --- */
 .page.inner .logo-notebook {
   position: absolute;
   top: 28px;
@@ -296,13 +297,12 @@ li {
   }
 
   .page.home .logo-home {
-    max-width: 160px;
+    max-width: 150px;
   }
 }
 
 /* ======================================================
    11. Notebook-lijntjes (DESKTOP ONLY)
-   Subtiele, niet-decoratieve variant
    ====================================================== */
 
 @media (min-width: 1024px) {
