@@ -49,6 +49,43 @@ body {
 }
 
 /* =====================
+   2a. Logo-plaatsing
+   ===================== */
+
+/* Basis logo */
+.logo {
+  display: block;
+  max-width: 220px;
+}
+
+/* --- HOME: logo als speels header-element --- */
+
+.page.home .logo-home {
+  margin-top: 12px;
+  transform: translateY(4px);
+}
+
+/* --- INNER: logo op notebook --- */
+
+.page.inner .logo-notebook {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  max-width: 160px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* Verberg ongebruikte variant per pagina */
+.page.home .logo-notebook {
+  display: none;
+}
+
+.page.inner .logo-home {
+  display: none;
+}
+
+/* =====================
    3. Typografie
    ===================== */
 
@@ -201,7 +238,7 @@ li {
    ===================== */
 
 .mobile-tabs {
-  display: none; /* desktop: nooit zichtbaar */
+  display: none;
 }
 
 /* =====================
@@ -220,12 +257,10 @@ li {
     box-shadow: none;
   }
 
-  /* Desktop tabs uit */
   .notebook-tabs {
     display: none;
   }
 
-  /* Mobile post-tabjes aan */
   .mobile-tabs {
     display: flex;
     justify-content: center;
@@ -253,7 +288,18 @@ li {
   p {
     max-width: 100%;
   }
+
+  .page.inner .logo-notebook {
+    max-width: 110px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .page.home .logo-home {
+    max-width: 160px;
+  }
 }
+
 /* ======================================================
    11. Notebook-lijntjes (DESKTOP ONLY)
    Subtiele, niet-decoratieve variant
@@ -261,43 +307,22 @@ li {
 
 @media (min-width: 1024px) {
 
-  /*
-    We gebruiken het bestaande body line-height:
-    font-size: 16px
-    line-height: 1.6 → 25.6px ≈ 26px
-    Dit wordt ons notebook-raster
-  */
   :root {
     --notebook-line-step: 26px;
     --notebook-line-color: rgba(0, 0, 0, 0.045);
   }
 
-  /*
-    Alleen inhoudelijke secties krijgen lijnen.
-    Intro (hero) blijft bewust leeg.
-  */
   .section:not(.section--intro) {
     position: relative;
   }
 
-  /*
-    De lijnen zelf
-    - beginnen NA de kop
-    - stoppen vóór de section-marge
-    - reageren niet op interactie
-  */
   .section:not(.section--intro)::before {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-
-    /* start iets onder de heading */
     top: calc(1.4rem + 32px);
-
-    /* laat ruimte aan onderzijde */
     bottom: 16px;
-
     background-image: linear-gradient(
       to bottom,
       var(--notebook-line-color) 1px,
@@ -307,27 +332,15 @@ li {
     pointer-events: none;
   }
 
-  /*
-    Tekst strak op het raster laten vallen
-    (zonder je bestaande margins te breken)
-  */
   .section:not(.section--intro) p,
   .section:not(.section--intro) li {
     line-height: var(--notebook-line-step);
   }
 
-  /*
-    Alinea’s blijven los, maar starten altijd
-    op een nieuwe regel van het raster
-  */
   .section:not(.section--intro) p + p {
     margin-top: var(--notebook-line-step);
   }
 
-  /*
-    Koppen "breken" het papier:
-    ze liggen optisch boven de lijnen
-  */
   .section h2,
   .section h3 {
     position: relative;
