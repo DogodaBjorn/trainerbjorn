@@ -1,6 +1,6 @@
 /* ======================================================
    TrainerBjorn CSS
-   Notebook-concept – definitieve uitlijning (2.2)
+   Notebook-concept – definitieve uitlijning (2.3)
    ====================================================== */
 
 
@@ -17,7 +17,7 @@
 
   --border-light: rgba(0, 0, 0, 0.08);
   --line-vertical: rgba(0, 0, 0, 0.07);
-  --line-horizontal: rgba(0, 0, 0, 0.04);
+  --line-horizontal: rgba(0, 0, 0, 0.045);
 
   --shadow-paper: 0 5px 14px rgba(0, 0, 0, 0.045);
 
@@ -32,8 +32,8 @@
   --radius-paper: 8px;
 
   /* Notebook grammar (desktop default) */
-  --notebook-line-top: 88px;
-  --notebook-content-offset: 16px;
+  --notebook-line-top: 84px;
+  --notebook-content-offset: 20px;
   --notebook-binding-left: 28px;
   --notebook-content-left: 32px;
 }
@@ -67,7 +67,7 @@ body {
   max-width: 920px;
   margin: 1.5rem auto;
   padding:
-    var(--space-xl)
+    calc(var(--notebook-line-top) + var(--notebook-content-offset))
     var(--space-md)
     var(--space-xl)
     calc(var(--notebook-binding-left) + var(--notebook-content-left));
@@ -108,13 +108,11 @@ body {
 
 
 /* =====================
-   5. Hero (starts after line)
+   5. Hero
    ===================== */
 
 .hero {
-  padding-top: calc(var(--notebook-line-top) + var(--notebook-content-offset));
-  padding-bottom: var(--space-lg);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .heading-primary {
@@ -134,7 +132,6 @@ body {
    ===================== */
 
 .section {
-  padding-top: var(--space-lg);
   margin-bottom: var(--space-xl);
 }
 
@@ -148,7 +145,7 @@ body {
    ===================== */
 
 .section--intro {
-  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
 }
 
 .section--explain,
@@ -227,16 +224,16 @@ body {
 @media (max-width: 600px) {
 
   :root {
-    --notebook-line-top: 76px;
-    --notebook-content-offset: 12px;
+    --notebook-line-top: 72px;
+    --notebook-content-offset: 16px;
     --notebook-binding-left: 20px;
-    --notebook-content-left: 28px;
+    --notebook-content-left: 26px;
   }
 
   .page {
     margin: 0.6rem;
     padding:
-      var(--space-lg)
+      calc(var(--notebook-line-top) + var(--notebook-content-offset))
       var(--space-md)
       var(--space-lg)
       calc(var(--notebook-binding-left) + var(--notebook-content-left));
@@ -261,8 +258,8 @@ body {
 @media (min-width: 768px) {
 
   :root {
-    --notebook-line-top: 88px;
-    --notebook-content-offset: 16px;
+    --notebook-line-top: 84px;
+    --notebook-content-offset: 20px;
     --notebook-binding-left: 28px;
     --notebook-content-left: 32px;
   }
@@ -277,6 +274,6 @@ body {
   }
 
   .section {
-    padding-top: var(--space-xl);
+    margin-bottom: calc(var(--space-xl) + var(--space-sm));
   }
 }
