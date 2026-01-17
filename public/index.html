@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrainerBjorn — Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/trainerbjorn.css" />
+  <title>TrainerBjorn — Werkplek</title>
+
+  <!-- Bestaande CSS -->
+  <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
 
   <main class="page">
     <article class="notebook">
 
-      <!-- =====================
-           Notebook tabs (NAV)
-           ===================== -->
+      <!-- =========================
+           Notebook tab-navigatie
+           ========================= -->
       <nav class="notebook-tabs" aria-label="Hoofdnavigatie">
 
         <!-- HOME (actief) -->
         <a href="/" class="tab active" aria-label="Home">
-          <!-- Home SVG -->
+          <!-- 🏠 Home -->
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" stroke="currentColor"
                stroke-width="1.3"
@@ -56,7 +58,7 @@
           </svg>
         </a>
 
-        <!-- TRAININGSAANBOD -->
+        <!-- TRAININGEN -->
         <a href="/trainingen" class="tab" aria-label="Trainingsaanbod">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" stroke="currentColor"
@@ -100,35 +102,127 @@
 
       </nav>
 
-      <!-- =====================
-           Home content
-           ===================== -->
+      <!-- =========================
+           ORIGINELE HOME CONTENT
+           (ONGEWIJZIGD)
+           ========================= -->
 
-      <section class="section section--intro">
-        <h1>TrainerBjorn</h1>
-        <p>
-          Dit is geen marketingpagina, geen cursusoverzicht en geen verkooppraat.
-          Dit is een plek waar systemen worden uitgelegd terwijl ze worden begrepen.
+      <section class="hero section section--intro">
+
+        <h1 class="heading-primary">
+          Sommige pagina’s nodigen uit om snel verder te gaan.
+        </h1>
+
+        <p class="text-body">
+          Mijn hoop: deze nodigt eerder uit om nog even te blijven.<br>
+          Even rond te kijken. Mee te denken.
         </p>
+
+        <p class="text-body">
+          Een werkplek.<br>
+          Een notitieboek dat openligt terwijl er wordt nagedacht, uitgelegd en geprobeerd.
+        </p>
+
+        <p class="text-body">
+          Ik werk hier met vragen die vaak terugkomen in trainingen.<br>
+          Vragen over systemen, keuzes, en waarom iets soms ineens wél of niet werkt.
+        </p>
+
+        <p class="text-body">
+          Soms begint dat met een schets.<br>
+          Soms met een voorbeeld.<br>
+          Altijd met de intentie om het samen helder te krijgen.
+        </p>
+
       </section>
 
-      <section class="section">
-        <p>
-          Trainingen gaan hier niet over het afvinken van stof, maar over het snappen
-          van waarom iets werkt — en wat je ermee kunt doen zodra je weer terug bent
-          in je eigen context.
+      <section class="section section--explain">
+
+        <h2 class="heading-secondary">
+          In veel vakgebieden ontstaat verwarring niet door gebrek aan kennis,
+        </h2>
+
+        <p class="text-body">
+          maar door het aantal mogelijkheden dat tegelijk openligt.
         </p>
+
+        <p class="text-body">
+          Zeker in data- en BI-werk voelt al snel alles relevant.<br>
+          Er zijn veel tools, veel routes, veel manieren om iets te bouwen.
+        </p>
+
+        <p class="text-body">
+          Wat dan ontbreekt, is niet informatie,<br>
+          maar houvast bij het kiezen.
+        </p>
+
+        <p class="text-body">
+          Wat is in deze situatie logisch?<br>
+          Wat draagt bij — en wat leidt vooral af?
+        </p>
+
+        <p class="text-body">
+          Begrip ontstaat hier zelden door méér theorie.<br>
+          Het ontstaat wanneer denken en doen naast elkaar mogen bestaan,<br>
+          en je onderzoekt hoe ze elkaar raken.
+        </p>
+
+        <p class="text-body">
+          Dat moment — waar inzicht richting geeft aan wat je bouwt —<br>
+          is waar leren hier begint.
+        </p>
+
       </section>
 
-      <section class="section">
-        <p>
-          Als je wilt weten hoe dat er in de praktijk uitziet, dan is de volgende
-          stap niet een aanbod, maar de werkwijze.
+      <section class="section section--structure">
+
+        <h2 class="heading-secondary">
+          In de praktijk komen vragen zelden netjes geordend binnen.
+        </h2>
+
+        <p class="text-body">
+          Ze duiken op terwijl je al aan het bouwen bent.
         </p>
 
-        <p>
-          <a href="/werkwijze">Lees hoe ik trainingen aanpak →</a>
+        <ul class="structure-list">
+          <li>— Hoe vertaal ik een wens naar een dashboard dat inhoudelijk klopt én impact maakt?</li>
+          <li>— Welke DAX-logica past hier, en wanneer maak ik het onnodig complex?</li>
+          <li>— Welke visual ondersteunt het verhaal, in plaats van het te overschreeuwen?</li>
+          <li>— Hoe voer ik het gesprek met een data engineer over modellen, bronnen en keuzes?</li>
+          <li>— Waar begin ik, zodat een BI-project niet weer blijft hangen in iteraties?</li>
+        </ul>
+
+        <p class="text-body">
+          Dit zijn geen losse problemen.<br>
+          Het zijn verschillende momenten in hetzelfde denkproces.
         </p>
+
+        <p class="text-body">
+          Pas wanneer die samenhang zichtbaar wordt,<br>
+          ontstaat er rust — en ruimte om verder te bouwen.
+        </p>
+
+      </section>
+
+      <section class="section section--offer">
+
+        <p class="text-body">
+          Als deze vragen herkenbaar zijn,<br>
+          is het logisch om verder te kijken hoe ik hiermee werk.
+        </p>
+
+        <p class="text-body">
+          Op deze site beschrijf ik hoe ik trainingen en workshops opzet:<br>
+          hoe structuur ontstaat,<br>
+          hoe praktijk en theorie elkaar versterken,<br>
+          en hoe mensen grip krijgen op hun eigen werk.
+        </p>
+
+        <p class="text-body">
+          Je kunt beginnen bij mijn werkwijze,<br>
+          of verkennen welke onderwerpen en thema’s daar vaak een rol in spelen.
+        </p>
+
       </section>
 
     </article>
