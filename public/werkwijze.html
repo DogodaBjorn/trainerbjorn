@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Hoe ik train – TrainerBjorn</title>
 
   <meta name="description"
@@ -14,157 +15,269 @@
 <body>
 
   <main class="page">
+    <article class="notebook">
 
-    <!-- INTRO / CONTEXT -->
-    <section class="section section--intro">
-      <h1 class="heading-primary">Hoe ik train</h1>
+      <!-- =========================
+           Notebook tab-navigatie
+           ========================= -->
+      <nav class="notebook-tabs" aria-label="Hoofdnavigatie">
 
-      <p class="text-body">
-        Deze pagina gaat niet over trainingen, tools of programma’s.
-        Ze gaat over hoe leren hier werkt.
-      </p>
+        <!-- HOME -->
+        <a href="/" class="tab" aria-label="Home">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.3"
+               stroke-linecap="round"
+               stroke-linejoin="round">
 
-      <p class="text-body">
-        Niet als methode.
-        Niet als stappenplan.
-        Maar als houding.
-      </p>
+              <path d="M4.5 15.5 L16 5.5 L27.5 15"/>
+              <path d="M5.2 16.3 L16.6 6.4 L26.8 15.6"/>
+              <path d="M6 15.8 L15.4 6 L26 14.8"/>
 
-      <p class="text-body">
-        Als je op zoek bent naar een strak programma dat je volgt en afrondt,
-        dan is dit waarschijnlijk niet de juiste plek.
-      </p>
+              <path d="M9 14 V26 H23 V13.5"/>
+              <path d="M9.6 14.8 V25.2 H22.4 V14.2"/>
+              <path d="M10.2 15.2 V24.6 H21.6 V14.6"/>
 
-      <p class="text-body">
-        Als je wilt begrijpen wat je doet, waarom je het doet,
-        en hoe je daar zelf verder mee kunt,
-        dan lees je hier hoe ik dat aanpak.
-      </p>
-    </section>
+              <path d="M14 26 V18 H18"/>
+              <path d="M14.6 26 V18.6 H17.4"/>
+            </g>
+          </svg>
+        </a>
 
-    <!-- UITLEG / VERDIEPING -->
-    <section class="section section--explain">
+        <!-- WERKWIJZE (actief) -->
+        <a href="/hoe-ik-train.html" class="tab active" aria-label="Hoe ik train">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.4"
+               stroke-linecap="round"
+               stroke-linejoin="round">
 
-      <h2 class="heading-secondary">Begrip boven controle</h2>
+              <path d="M6 5.5 L10.5 26.5 L16 13 L22 26 L26.5 6"/>
+              <path d="M6.8 6.6 L11 25.2 L15.2 13.8 L21.4 25.4 L25.8 7"/>
+              <path d="M7.4 7.2 L10.8 24.8 L16.8 14.6 L22.6 24.8 L25 6.8"/>
+            </g>
+          </svg>
+        </a>
 
-      <p class="text-body">
-        In mijn trainingen is begrip belangrijker dan volledigheid.
-      </p>
+        <!-- TRAININGEN -->
+        <a href="/trainingen" class="tab" aria-label="Trainingen">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.4"
+               stroke-linecap="round">
 
-      <p class="text-body">
-        Niet omdat details onbelangrijk zijn,
-        maar omdat details pas waarde krijgen als de structuur klopt.
-      </p>
+              <path d="M6.5 8.2 H25.5"/>
+              <path d="M7.2 8.9 H24.6"/>
 
-      <p class="text-body">
-        We werken toe naar momenten waarop deelnemers zelf kunnen uitleggen
-        wat er gebeurt —
-        niet alleen wat ze moeten doen.
-      </p>
+              <path d="M16.4 8.4 V26"/>
+              <path d="M15.6 9.2 V25.2"/>
+            </g>
+          </svg>
+        </a>
 
-      <h2 class="heading-secondary">Structuur als vaste ruggengraat</h2>
+        <!-- OVER MIJ -->
+        <a href="/over-mij" class="tab" aria-label="Over mij">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.3"
+               stroke-linecap="round"
+               stroke-linejoin="round">
 
-      <p class="text-body">
-        Vrijheid bestaat alleen bij de gratie van structuur.
-      </p>
+              <path d="M16 6.2
+                       C10.5 6.8, 6.8 11, 7.2 16.4
+                       C7.6 21.6, 11.4 25.4, 16.2 25
+                       C21.2 24.6, 25 20.8, 24.6 15.8
+                       C24.2 10.8, 20.6 6, 16 6.2"/>
 
-      <p class="text-body">
-        Elke training heeft een duidelijke leerroute.
-        Die route ligt vast,
-        ook als de inhoud meebeweegt met de groep.
-      </p>
+              <path d="M15.4 7.2
+                       C11.2 7.8, 8.2 11.8, 8.6 16
+                       C9 20.8, 12.2 24.2, 15.8 24
+                       C20.6 23.8, 23.6 20.2, 23.2 15.4
+                       C22.8 11, 19.8 7, 15.4 7.2"/>
 
-      <p class="text-body">
-        Dat betekent dat we soms tempo maken,
-        soms vertragen,
-        maar nooit willekeurig van onderwerp naar onderwerp springen.
-      </p>
+              <circle cx="12.8" cy="3.4" r="1.2" fill="currentColor"/>
+              <circle cx="19.8" cy="3.8" r="0.9" fill="currentColor"/>
+            </g>
+          </svg>
+        </a>
 
-      <p class="text-body">
-        De structuur bewaakt het gezamenlijke eindpunt.
-      </p>
+      </nav>
 
-      <h2 class="heading-secondary">Off-piste gaan is functioneel</h2>
+      <!-- =========================
+           ORIGINELE CONTENT
+           (ONGEWIJZIGD)
+           ========================= -->
 
-      <p class="text-body">
-        Vragen uit de praktijk zijn welkom —
-        ook als ze buiten het geplande onderwerp vallen.
-      </p>
+      <!-- INTRO / CONTEXT -->
+      <section class="section section--intro">
+        <h1 class="heading-primary">Hoe ik train</h1>
 
-      <p class="text-body">
-        We maken die zijstappen alleen wanneer ze helpen
-        om de volgende stap in de leerroute beter te begrijpen.
-      </p>
+        <p class="text-body">
+          Deze pagina gaat niet over trainingen, tools of programma’s.
+          Ze gaat over hoe leren hier werkt.
+        </p>
 
-      <p class="text-body">
-        Off-piste gaan is geen vrijheid,
-        maar een didactische keuze.
-      </p>
+        <p class="text-body">
+          Niet als methode.
+          Niet als stappenplan.
+          Maar als houding.
+        </p>
 
-      <h2 class="heading-secondary">Omgaan met niveauverschillen</h2>
+        <p class="text-body">
+          Als je op zoek bent naar een strak programma dat je volgt en afrondt,
+          dan is dit waarschijnlijk niet de juiste plek.
+        </p>
 
-      <p class="text-body">
-        Niveauverschillen zijn normaal
-        en worden niet gladgestreken.
-      </p>
+        <p class="text-body">
+          Als je wilt begrijpen wat je doet, waarom je het doet,
+          en hoe je daar zelf verder mee kunt,
+          dan lees je hier hoe ik dat aanpak.
+        </p>
+      </section>
 
-      <p class="text-body">
-        Begrip wordt regelmatig expliciet getoetst,
-        niet verondersteld.
-      </p>
+      <!-- UITLEG / VERDIEPING -->
+      <section class="section section--explain">
 
-      <p class="text-body">
-        Snellere deelnemers worden actief ingezet
-        om anderen mee te nemen,
-        zodat het tempo gezamenlijk blijft.
-      </p>
+        <h2 class="heading-secondary">Begrip boven controle</h2>
 
-      <p class="text-body">
-        Niemand gaat verder
-        zolang de groep het fundament niet deelt.
-      </p>
+        <p class="text-body">
+          In mijn trainingen is begrip belangrijker dan volledigheid.
+        </p>
 
-      <h2 class="heading-secondary">Energie en plezier als instrument</h2>
+        <p class="text-body">
+          Niet omdat details onbelangrijk zijn,
+          maar omdat details pas waarde krijgen als de structuur klopt.
+        </p>
 
-      <p class="text-body">
-        Energie en plezier zijn geen extra’s,
-        maar hulpmiddelen.
-      </p>
+        <p class="text-body">
+          We werken toe naar momenten waarop deelnemers zelf kunnen uitleggen
+          wat er gebeurt —
+          niet alleen wat ze moeten doen.
+        </p>
 
-      <p class="text-body">
-        Ze verlagen spanning,
-        maken fouten bespreekbaar
-        en houden aandacht vast bij complexe onderwerpen.
-      </p>
+        <h2 class="heading-secondary">Structuur als vaste ruggengraat</h2>
 
-      <p class="text-body">
-        De inhoud blijft serieus —
-        de sfeer niet zwaar.
-      </p>
+        <p class="text-body">
+          Vrijheid bestaat alleen bij de gratie van structuur.
+        </p>
 
-    </section>
+        <p class="text-body">
+          Elke training heeft een duidelijke leerroute.
+          Die route ligt vast,
+          ook als de inhoud meebeweegt met de groep.
+        </p>
 
-    <!-- STRUCTUUR / OVERZICHT -->
-    <section class="section section--structure">
-      <h2 class="heading-secondary">Wat steeds terugkomt</h2>
+        <p class="text-body">
+          Dat betekent dat we soms tempo maken,
+          soms vertragen,
+          maar nooit willekeurig van onderwerp naar onderwerp springen.
+        </p>
 
-      <ul class="structure-list">
-        <li>Een vaste leerroute met een gezamenlijk eindpunt</li>
-        <li>Regelmatige checks op begrip</li>
-        <li>Ruimte voor praktijkvragen binnen de structuur</li>
-        <li>Een actieve rol van deelnemers</li>
-        <li>Focus op toepassen na de training</li>
-      </ul>
+        <p class="text-body">
+          De structuur bewaakt het gezamenlijke eindpunt.
+        </p>
 
-      <p class="text-body">
-        Alles wat hierboven staat,
-        komt steeds terug —
-        ongeacht onderwerp of niveau.
-      </p>
-    </section>
+        <h2 class="heading-secondary">Off-piste gaan is functioneel</h2>
 
-    <!-- INSIGHT / REFLECTIE -->
-    <section class="section section--insight">
-      <p class="text-body">
-        Wat mij het meest interesseert in trainingen
-        is h
+        <p class="text-body">
+          Vragen uit de praktijk zijn welkom —
+          ook als ze buiten het geplande onderwerp vallen.
+        </p>
+
+        <p class="text-body">
+          We maken die zijstappen alleen wanneer ze helpen
+          om de volgende stap in de leerroute beter te begrijpen.
+        </p>
+
+        <p class="text-body">
+          Off-piste gaan is geen vrijheid,
+          maar een didactische keuze.
+        </p>
+
+        <h2 class="heading-secondary">Omgaan met niveauverschillen</h2>
+
+        <p class="text-body">
+          Niveauverschillen zijn normaal
+          en worden niet gladgestreken.
+        </p>
+
+        <p class="text-body">
+          Begrip wordt regelmatig expliciet getoetst,
+          niet verondersteld.
+        </p>
+
+        <p class="text-body">
+          Snellere deelnemers worden actief ingezet
+          om anderen mee te nemen,
+          zodat het tempo gezamenlijk blijft.
+        </p>
+
+        <p class="text-body">
+          Niemand gaat verder
+          zolang de groep het fundament niet deelt.
+        </p>
+
+        <h2 class="heading-secondary">Energie en plezier als instrument</h2>
+
+        <p class="text-body">
+          Energie en plezier zijn geen extra’s,
+          maar hulpmiddelen.
+        </p>
+
+        <p class="text-body">
+          Ze verlagen spanning,
+          maken fouten bespreekbaar
+          en houden aandacht vast bij complexe onderwerpen.
+        </p>
+
+        <p class="text-body">
+          De inhoud blijft serieus —
+          de sfeer niet zwaar.
+        </p>
+
+      </section>
+
+      <!-- STRUCTUUR / OVERZICHT -->
+      <section class="section section--structure">
+        <h2 class="heading-secondary">Wat steeds terugkomt</h2>
+
+        <ul class="structure-list">
+          <li>Een vaste leerroute met een gezamenlijk eindpunt</li>
+          <li>Regelmatige checks op begrip</li>
+          <li>Ruimte voor praktijkvragen binnen de structuur</li>
+          <li>Een actieve rol van deelnemers</li>
+          <li>Focus op toepassen na de training</li>
+        </ul>
+
+        <p class="text-body">
+          Alles wat hierboven staat,
+          komt steeds terug —
+          ongeacht onderwerp of niveau.
+        </p>
+      </section>
+
+      <!-- INSIGHT / REFLECTIE -->
+      <section class="section section--insight">
+        <p class="text-body">
+          Wat mij het meest interesseert in trainingen
+          is het moment waarop deelnemers elkaar gaan uitleggen
+          wat er gebeurt.
+        </p>
+
+        <p class="text-body">
+          Niet omdat ik dan “klaar” ben,
+          maar omdat het eigenaarschap verschuift.
+        </p>
+
+        <p class="text-body">
+          Dat moment laat zich niet afdwingen.
+          Je kunt het alleen voorbereiden
+          door structuur, aandacht en ruimte te combineren.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+</body>
+</html>
