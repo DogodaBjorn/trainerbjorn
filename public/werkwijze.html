@@ -18,18 +18,24 @@
     <article class="notebook">
 
       <!-- Logo rechtsboven IN het notebook -->
-      <img src="/assets/images/logo-trainerbjorn.png"
-           alt="TrainerBjorn"
-           class="logo logo-notebook" />
+      <img
+        src="/assets/images/logo-trainerbjorn.png"
+        alt="TrainerBjorn"
+        class="logo logo-notebook"
+      />
 
       <!-- =========================
            Notebook tab-navigatie (DESKTOP)
            ========================= -->
       <nav class="notebook-tabs" aria-label="Hoofdnavigatie">
 
+        <!-- HOME -->
         <a href="/" class="tab" aria-label="Home">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.3"
+               stroke-linecap="round"
+               stroke-linejoin="round">
               <path d="M4.5 15.5 L16 5.5 L27.5 15"/>
               <path d="M5.2 16.3 L16.6 6.4 L26.8 15.6"/>
               <path d="M6 15.8 L15.4 6 L26 14.8"/>
@@ -42,9 +48,12 @@
           </svg>
         </a>
 
-        <a href="/trainingen" class="tab" aria-label="Trainingen">
+        <!-- TRAININGEN -->
+        <a href="/trainingen" class="tab" aria-label="Trainingsaanbod">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.4"
+               stroke-linecap="round">
               <path d="M6.5 8.2 H25.5"/>
               <path d="M7.2 8.9 H24.6"/>
               <path d="M16.4 8.4 V26"/>
@@ -53,9 +62,13 @@
           </svg>
         </a>
 
+        <!-- WERKWIJZE (actief) -->
         <a href="/werkwijze" class="tab active" aria-label="Werkwijze">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.4"
+               stroke-linecap="round"
+               stroke-linejoin="round">
               <path d="M6 5.5 L10.5 26.5 L16 13 L22 26 L26.5 6"/>
               <path d="M6.8 6.6 L11 25.2 L15.2 13.8 L21.4 25.4 L25.8 7"/>
               <path d="M7.4 7.2 L10.8 24.8 L16.8 14.6 L22.6 24.8 L25 6.8"/>
@@ -63,14 +76,20 @@
           </svg>
         </a>
 
+        <!-- OVER MIJ -->
         <a href="/over-mij" class="tab" aria-label="Over mij">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 6.2 C10.5 6.8, 6.8 11, 7.2 16.4
+            <g fill="none" stroke="currentColor"
+               stroke-width="1.3"
+               stroke-linecap="round"
+               stroke-linejoin="round">
+              <path d="M16 6.2
+                       C10.5 6.8, 6.8 11, 7.2 16.4
                        C7.6 21.6, 11.4 25.4, 16.2 25
                        C21.2 24.6, 25 20.8, 24.6 15.8
                        C24.2 10.8, 20.6 6, 16 6.2"/>
-              <path d="M15.4 7.2 C11.2 7.8, 8.2 11.8, 8.6 16
+              <path d="M15.4 7.2
+                       C11.2 7.8, 8.2 11.8, 8.6 16
                        C9 20.8, 12.2 24.2, 15.8 24
                        C20.6 23.8, 23.6 20.2, 23.2 15.4
                        C22.8 11, 19.8 7, 15.4 7.2"/>
@@ -83,44 +102,40 @@
       </nav>
 
       <!-- =========================
-           INTRO / CONTEXT
+           ORIGINELE CONTENT (ALLE TEKST INTACT)
            ========================= -->
+
+      <!-- INTRO / CONTEXT -->
       <section class="section section--intro">
 
-        <!-- Geschetste SVG HEADER -->
-        <div class="sketch-header sketch-header--large" aria-hidden="true">
-          <svg viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- W -->
-              <path d="M20 15 L40 75 L70 25 L100 75 L120 15"/>
-              <path d="M22 18 L42 72 L70 30 L98 72 L118 18"/>
+        <!-- SVG HEADER: WERKWIJZE -->
+        <div class="schematic" aria-hidden="true">
+          <svg viewBox="0 0 520 110" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 20 L35 90 L55 40 L75 90 L95 20" stroke-width="3.2"/>
+              <path d="M22 22 L37 88 L57 42 L77 88 L93 22" stroke-width="1.6"/>
 
-              <!-- e -->
-              <path d="M145 45 C145 25, 190 25, 190 45 C190 65, 145 65, 145 45"/>
-              <path d="M145 45 H190"/>
+              <path d="M120 60 C120 35, 160 35, 160 60 C160 85, 120 85, 120 60 Z" stroke-width="2.6"/>
+              <path d="M122 62 C122 40, 158 40, 158 62" stroke-width="1.4"/>
 
-              <!-- r -->
-              <path d="M210 30 V70"/>
-              <path d="M210 40 C225 25, 255 30, 235 50"/>
+              <path d="M180 30 V85" stroke-width="2.8"/>
+              <path d="M180 45 C200 35, 215 45, 200 60" stroke-width="2.2"/>
 
-              <!-- k -->
-              <path d="M265 15 V75"/>
-              <path d="M265 45 L300 20"/>
-              <path d="M270 45 L305 75"/>
+              <path d="M235 20 V90" stroke-width="3"/>
+              <path d="M235 55 L270 30" stroke-width="2.2"/>
+              <path d="M235 55 L270 85" stroke-width="2.2"/>
 
-              <!-- w -->
-              <path d="M320 30 L335 70 L355 40 L375 70 L390 30"/>
+              <path d="M290 45 L305 85 L320 55 L335 85 L350 45" stroke-width="2.6"/>
 
-              <!-- i -->
-              <path d="M410 35 V70"/>
-              <circle cx="410" cy="22" r="2"/>
+              <path d="M370 50 V85" stroke-width="2.6"/>
+              <circle cx="370" cy="35" r="3" fill="currentColor"/>
 
-              <!-- j -->
-              <path d="M430 35 V78 C430 88, 420 90, 412 86"/>
-              <circle cx="430" cy="22" r="2"/>
+              <path d="M395 50 V95 C395 105, 380 105, 375 95" stroke-width="2.6"/>
+              <circle cx="395" cy="35" r="3" fill="currentColor"/>
 
-              <!-- z -->
-              <path d="M455 30 H500 L455 70 H500"/>
+              <path d="M420 50 H460 L420 85 H460" stroke-width="2.6"/>
+
+              <path d="M485 60 C485 35, 520 35, 520 60 C520 85, 485 85, 485 60 Z" stroke-width="2.6"/>
             </g>
           </svg>
         </div>
@@ -146,20 +161,209 @@
           en hoe je daar zelf verder mee kunt,
           dan lees je hier hoe ik dat aanpak.
         </p>
+
       </section>
 
-      <!-- VERDERE CONTENT ONGEWIJZIGD -->
-      <!-- (rest exact zoals aangeleverd) -->
+      <!-- UITLEG / VERDIEPING -->
+      <section class="section section--explain">
+
+        <h2 class="heading-secondary">Begrip boven controle</h2>
+
+        <p class="text-body">
+          In mijn trainingen is begrip belangrijker dan volledigheid.
+        </p>
+
+        <p class="text-body">
+          Niet omdat details onbelangrijk zijn,
+          maar omdat details pas waarde krijgen als de structuur klopt.
+        </p>
+
+        <p class="text-body">
+          We werken toe naar momenten waarop deelnemers zelf kunnen uitleggen
+          wat er gebeurt —
+          niet alleen wat ze moeten doen.
+        </p>
+
+        <h2 class="heading-secondary">Structuur als vaste ruggengraat</h2>
+
+        <p class="text-body">
+          Vrijheid bestaat alleen bij de gratie van structuur.
+        </p>
+
+        <p class="text-body">
+          Elke training heeft een duidelijke leerroute.
+          Die route ligt vast,
+          ook als de inhoud meebeweegt met de groep.
+        </p>
+
+        <p class="text-body">
+          Dat betekent dat we soms tempo maken,
+          soms vertragen,
+          maar nooit willekeurig van onderwerp naar onderwerp springen.
+        </p>
+
+        <p class="text-body">
+          De structuur bewaakt het gezamenlijke eindpunt.
+        </p>
+
+        <h2 class="heading-secondary">Off-piste gaan is functioneel</h2>
+
+        <p class="text-body">
+          Vragen uit de praktijk zijn welkom —
+          ook als ze buiten het geplande onderwerp vallen.
+        </p>
+
+        <p class="text-body">
+          We maken die zijstappen alleen wanneer ze helpen
+          om de volgende stap in de leerroute beter te begrijpen.
+        </p>
+
+        <p class="text-body">
+          Off-piste gaan is geen vrijheid,
+          maar een didactische keuze.
+        </p>
+
+        <h2 class="heading-secondary">Omgaan met niveauverschillen</h2>
+
+        <p class="text-body">
+          Niveauverschillen zijn normaal
+          en worden niet gladgestreken.
+        </p>
+
+        <p class="text-body">
+          Begrip wordt regelmatig expliciet getoetst,
+          niet verondersteld.
+        </p>
+
+        <p class="text-body">
+          Snellere deelnemers worden actief ingezet
+          om anderen mee te nemen,
+          zodat het tempo gezamenlijk blijft.
+        </p>
+
+        <p class="text-body">
+          Niemand gaat verder
+          zolang de groep het fundament niet deelt.
+        </p>
+
+        <h2 class="heading-secondary">Energie en plezier als instrument</h2>
+
+        <p class="text-body">
+          Energie en plezier zijn geen extra’s,
+          maar hulpmiddelen.
+        </p>
+
+        <p class="text-body">
+          Ze verlagen spanning,
+          maken fouten bespreekbaar
+          en houden aandacht vast bij complexe onderwerpen.
+        </p>
+
+        <p class="text-body">
+          De inhoud blijft serieus —
+          de sfeer niet zwaar.
+        </p>
+
+      </section>
+
+      <!-- STRUCTUUR / OVERZICHT -->
+      <section class="section section--structure">
+        <h2 class="heading-secondary">Wat steeds terugkomt</h2>
+
+        <ul class="structure-list">
+          <li>Een vaste leerroute met een gezamenlijk eindpunt</li>
+          <li>Regelmatige checks op begrip</li>
+          <li>Ruimte voor praktijkvragen binnen de structuur</li>
+          <li>Een actieve rol van deelnemers</li>
+          <li>Focus op toepassen na de training</li>
+        </ul>
+
+        <p class="text-body">
+          Alles wat hierboven staat,
+          komt steeds terug —
+          ongeacht onderwerp of niveau.
+        </p>
+      </section>
+
+      <!-- INSIGHT / REFLECTIE -->
+      <section class="section section--insight">
+        <p class="text-body">
+          Wat mij het meest interesseert in trainingen
+          is het moment waarop deelnemers elkaar gaan uitleggen
+          wat er gebeurt.
+        </p>
+
+        <p class="text-body">
+          Niet omdat ik dan “klaar” ben,
+          maar omdat het eigenaarschap verschuift.
+        </p>
+
+        <p class="text-body">
+          Dat moment laat zich niet afdwingen.
+          Je kunt het alleen voorbereiden
+          door structuur, aandacht en ruimte te combineren.
+        </p>
+      </section>
 
       <!-- =========================
            Mobile post-tabjes
            ========================= -->
       <nav class="mobile-tabs" aria-label="Paginanavigatie">
 
-        <a href="/" class="tab" aria-label="Home">…</a>
-        <a href="/werkwijze" class="tab active" aria-label="Werkwijze">…</a>
-        <a href="/trainingen" class="tab" aria-label="Trainingen">…</a>
-        <a href="/over-mij" class="tab" aria-label="Over mij">…</a>
+        <a href="/" class="tab" aria-label="Home">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 15.5 L16 5.5 L27.5 15"/>
+              <path d="M5.2 16.3 L16.6 6.4 L26.8 15.6"/>
+              <path d="M6 15.8 L15.4 6 L26 14.8"/>
+              <path d="M9 14 V26 H23 V13.5"/>
+              <path d="M9.6 14.8 V25.2 H22.4 V14.2"/>
+              <path d="M10.2 15.2 V24.6 H21.6 V14.6"/>
+              <path d="M14 26 V18 H18"/>
+              <path d="M14.6 26 V18.6 H17.4"/>
+            </g>
+          </svg>
+        </a>
+
+        <a href="/werkwijze" class="tab active" aria-label="Werkwijze">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 5.5 L10.5 26.5 L16 13 L22 26 L26.5 6"/>
+              <path d="M6.8 6.6 L11 25.2 L15.2 13.8 L21.4 25.4 L25.8 7"/>
+              <path d="M7.4 7.2 L10.8 24.8 L16.8 14.6 L22.6 24.8 L25 6.8"/>
+            </g>
+          </svg>
+        </a>
+
+        <a href="/trainingen" class="tab" aria-label="Trainingen">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+              <path d="M6.5 8.2 H25.5"/>
+              <path d="M7.2 8.9 H24.6"/>
+              <path d="M16.4 8.4 V26"/>
+              <path d="M15.6 9.2 V25.2"/>
+            </g>
+          </svg>
+        </a>
+
+        <a href="/over-mij" class="tab" aria-label="Over mij">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 6.2
+                       C10.5 6.8, 6.8 11, 7.2 16.4
+                       C7.6 21.6, 11.4 25.4, 16.2 25
+                       C21.2 24.6, 25 20.8, 24.6 15.8
+                       C24.2 10.8, 20.6 6, 16 6.2"/>
+              <path d="M15.4 7.2
+                       C11.2 7.8, 8.2 11.8, 8.6 16
+                       C9 20.8, 12.2 24.2, 15.8 24
+                       C20.6 23.8, 23.6 20.2, 23.2 15.4
+                       C22.8 11, 19.8 7, 15.4 7.2"/>
+              <circle cx="12.8" cy="3.4" r="1.2" fill="currentColor"/>
+              <circle cx="19.8" cy="3.8" r="0.9" fill="currentColor"/>
+            </g>
+          </svg>
+        </a>
 
       </nav>
 
