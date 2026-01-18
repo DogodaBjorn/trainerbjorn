@@ -1,6 +1,7 @@
 /* ======================================================
    TrainerBjorn CSS – Notebook Fundament
    Voorbereid op schets-tab navigatie (desktop + mobile)
+   + geschetste SVG woord-headers
    ====================================================== */
 
 /* =====================
@@ -122,6 +123,30 @@ a:hover {
 }
 
 /* =====================
+   3a. Geschetste SVG woord-headers
+   ===================== */
+
+.sketch-header {
+  margin: 0 0 24px 0;
+}
+
+.sketch-header svg {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 64px;
+  color: #1f2933;
+}
+
+.sketch-header--large svg {
+  height: 72px;
+}
+
+.sketch-header--compact svg {
+  height: 56px;
+}
+
+/* =====================
    4. Sections & ritme
    ===================== */
 
@@ -154,6 +179,7 @@ a:hover {
 }
 
 .notebook-tabs .tab {
+  position: relative;
   width: 32px;
   height: 32px;
   opacity: 0.45;
@@ -233,13 +259,11 @@ li {
 }
 
 /* ======================================================
-   10. MOBILE – GERichte verfijning
-   (desktop blijft onaangetast)
+   10. MOBILE – Gerichte verfijning
    ====================================================== */
 
 @media (max-width: 640px) {
 
-  /* Minder canvas, meer blad */
   .page {
     max-width: none;
     margin: 16px auto;
@@ -252,7 +276,6 @@ li {
     box-shadow: none;
   }
 
-  /* Koppen: rustiger, kleiner */
   h1 {
     font-size: 1.6rem;
     line-height: 1.25;
@@ -273,7 +296,6 @@ li {
     margin-bottom: 10px;
   }
 
-  /* Body iets compacter, niet kleiner */
   body {
     font-size: 0.95rem;
     line-height: 1.65;
@@ -284,18 +306,15 @@ li {
     margin-bottom: 1.1em;
   }
 
-  /* Logo’s subtieler */
-  .page.inner .logo-notebook {
-    max-width: 110px;
-    top: 16px;
-    right: 16px;
+  /* SVG headers compacter op mobiel */
+  .sketch-header svg {
+    height: 48px;
   }
 
-  .page.home .logo-home {
-    max-width: 150px;
+  .sketch-header--large svg {
+    height: 56px;
   }
 
-  /* Desktop tabs uit, mobile tabs aan */
   .notebook-tabs {
     display: none;
   }
