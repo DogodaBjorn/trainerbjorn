@@ -1,6 +1,7 @@
 /* ======================================================
    TrainerBjorn CSS – Notebook Fundament
    Exact afgestemd op schets- en papierkleuren
+   + Visual headings (PNG / SVG)
    ====================================================== */
 
 /* =====================
@@ -20,8 +21,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #F3F1EC; /* buitenrand – iets donkerder papier */
-  color: #2B2B2B; /* grafiet-inkt */
+  background-color: #F3F1EC;
+  color: #2B2B2B;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
                'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -37,10 +38,9 @@ body {
   padding: 0 24px;
 }
 
-/* Het notitieblad zelf */
 .notebook {
   position: relative;
-  background-color: #FAFAF8; /* exact schetspapier */
+  background-color: #FAFAF8;
   border-radius: 4px;
   padding: 56px 72px 72px 72px;
   box-shadow:
@@ -57,7 +57,6 @@ body {
   max-width: 220px;
 }
 
-/* HOME: logo inline */
 .page.home .logo-home {
   display: inline-block;
   vertical-align: baseline;
@@ -66,7 +65,6 @@ body {
   max-width: 200px;
 }
 
-/* INNER: logo rechtsboven */
 .page.inner .logo-notebook {
   position: absolute;
   top: 28px;
@@ -126,27 +124,31 @@ a:hover {
 }
 
 /* =====================
-   3a. Geschetste SVG woord-headers
+   3a. Visual headings (PNG / SVG)
    ===================== */
 
-.sketch-header {
-  margin: 0 0 24px 0;
-}
-
-.sketch-header svg {
+.visual-heading {
   display: block;
-  width: auto;
+  margin: 0 0 24px 0;
   max-width: 100%;
-  height: 64px;
-  color: #2A2A2A; /* zelfde inktkleur als tekst */
 }
 
-.sketch-header--large svg {
-  height: 72px;
+.visual-heading img,
+.visual-heading svg {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
 }
 
-.sketch-header--compact svg {
-  height: 56px;
+.visual-heading--primary img,
+.visual-heading--primary svg {
+  max-width: 560px;
+}
+
+.visual-heading--compact img,
+.visual-heading--compact svg {
+  max-width: 420px;
 }
 
 /* =====================
@@ -282,6 +284,11 @@ li {
     box-shadow: none;
   }
 
+  body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
   h1 {
     font-size: 1.6rem;
     line-height: 1.25;
@@ -302,22 +309,14 @@ li {
     margin-bottom: 10px;
   }
 
-  body {
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
-
   p {
     max-width: 100%;
     margin-bottom: 1.1em;
   }
 
-  .sketch-header svg {
-    height: 48px;
-  }
-
-  .sketch-header--large svg {
-    height: 56px;
+  .visual-heading img,
+  .visual-heading svg {
+    max-width: 100%;
   }
 
   .notebook-tabs {
