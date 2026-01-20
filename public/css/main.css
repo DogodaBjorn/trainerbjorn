@@ -39,7 +39,7 @@ body {
 
 .notebook {
   position: relative;
-  background-color: #F3F1EC;          /* NOTEBOOK – crème papier */
+  background-color: #FEFDF5;          /* NOTEBOOK – crème papier */
   border-radius: 6px;
   padding: 56px 72px 72px 72px;
   box-shadow:
@@ -285,7 +285,7 @@ li {
 
   .section h2,
   .section h3 {
-    background: #F3F1EC;
+    background: #FEFDF5;
     display: inline-block;
     padding-right: 6px;
   }
