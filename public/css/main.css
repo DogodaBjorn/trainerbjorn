@@ -20,7 +20,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #FCF7F5;          /* CANVAS – wit */
+  background-color: #EEF0F2;          /* CANVAS – wit */
   color: #2B2B2B;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
                'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -39,7 +39,7 @@ body {
 
 .notebook {
   position: relative;
-  background-color: #FEFDF5;          /* NOTEBOOK – crème papier */
+  background-color: #FCF8F6;          /* NOTEBOOK – crème papier */
   border-radius: 6px;
   padding: 56px 72px 72px 72px;
   box-shadow:
@@ -165,7 +165,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FCF7F5;
+  color: #2E2E2E;
 }
 
 .notebook-tabs .tab.active {
@@ -285,7 +285,7 @@ li {
 
   .section h2,
   .section h3 {
-    background: #FEFDF5;
+    background: #FCF8F6;
     display: inline-block;
     padding-right: 6px;
   }
