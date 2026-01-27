@@ -1,6 +1,6 @@
 /* ======================================================
-   TrainerBjorn CSS – Notebook Fundament (LINED SYSTEM)
-   Baseline-driven notebook grid
+   TrainerBjorn CSS – Notebook Fundament (STABLE LINED)
+   Doorlopende lijnen zonder layout-breuk
    ====================================================== */
 
 /* =====================
@@ -27,7 +27,7 @@ body {
 }
 
 /* =====================
-   2. Baseline systeem
+   2. Variabelen
    ===================== */
 
 :root {
@@ -60,12 +60,21 @@ body {
 }
 
 /* =====================
-   4. Notebook-lijnen (DESKTOP)
+   4. Notebook paper layer
+   ===================== */
+
+.notebook-paper {
+  position: relative;
+  padding-top: calc(var(--notebook-baseline) * 2); /* wit bovenin */
+}
+
+/* =====================
+   5. Doorlopende lijnen (DESKTOP)
    ===================== */
 
 @media (min-width: 1024px) {
 
-  .notebook::before {
+  .notebook-paper::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -80,15 +89,14 @@ body {
     z-index: 0;
   }
 
-  /* Content altijd boven de lijnen */
-  .notebook > * {
+  .notebook-paper > * {
     position: relative;
     z-index: 1;
   }
 }
 
 /* =====================
-   5. Typografie op raster
+   6. Typografie (ongewijzigd gedrag)
    ===================== */
 
 p,
@@ -107,7 +115,6 @@ h3 {
   padding-right: 8px;
 }
 
-/* Koppen breken bewust het raster */
 h1 {
   font-size: 2rem;
   font-weight: 600;
@@ -127,20 +134,19 @@ h3 {
 }
 
 /* =====================
-   6. Secties & ritme
+   7. Secties & ritme
    ===================== */
 
 .section {
   margin-bottom: calc(var(--notebook-baseline) * 3);
 }
 
-/* Intro: bewust zonder lijnen */
 .section--intro {
   margin-bottom: calc(var(--notebook-baseline) * 3);
 }
 
 /* =====================
-   7. Lijnloze ademruimte
+   8. Lijnloze ademruimte
    ===================== */
 
 .section--blank,
@@ -150,6 +156,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .section--blank::before,
   .line-break::before {
     content: "";
@@ -167,7 +174,7 @@ h3 {
 }
 
 /* =====================
-   8. Visual headings & schetsen
+   9. Visual headings & schetsen
    ===================== */
 
 .visual-heading {
@@ -181,10 +188,11 @@ h3 {
   width: 100%;
   height: auto;
   background-color: var(--notebook-paper);
+  padding: 4px 6px; /* voelt ingelegd */
 }
 
 /* =====================
-   9. Lijsten
+   10. Lijsten
    ===================== */
 
 ul {
@@ -197,7 +205,7 @@ li {
 }
 
 /* =====================
-   10. Links
+   11. Links
    ===================== */
 
 a {
@@ -211,7 +219,7 @@ a:hover {
 }
 
 /* =====================
-   11. Mobile (bewust zonder lijnen)
+   12. Mobile (bewust zonder lijnen)
    ===================== */
 
 @media (max-width: 640px) {
@@ -231,7 +239,7 @@ a:hover {
     line-height: 1.65;
   }
 
-  .notebook::before {
+  .notebook-paper::before {
     display: none;
   }
 
