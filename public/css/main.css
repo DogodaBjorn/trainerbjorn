@@ -1,6 +1,6 @@
 /* ======================================================
-   TrainerBjorn CSS – Notebook Fundament (STABLE LINED)
-   Doorlopende lijnen zonder layout-breuk
+   TrainerBjorn CSS – Notebook Fundament (STABLE)
+   Lijnen uitsluitend op papierlaag
    ====================================================== */
 
 /* =====================
@@ -20,14 +20,14 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #EEF0F2;          /* canvas */
+  background-color: #EEF0F2; /* canvas */
   color: #2B2B2B;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
                'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* =====================
-   2. Variabelen
+   2. Baseline systeem
    ===================== */
 
 :root {
@@ -60,16 +60,73 @@ body {
 }
 
 /* =====================
-   4. Notebook paper layer
+   4. Notebook tabs (DESKTOP)
+   ===================== */
+
+.notebook-tabs {
+  position: absolute;
+  top: 24px;
+  right: -44px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 20;
+}
+
+.notebook-tabs .tab {
+  width: 32px;
+  height: 32px;
+  opacity: 0.45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2E2E2E;
+}
+
+.notebook-tabs .tab.active {
+  opacity: 0.9;
+}
+
+.notebook-tabs .tab.active::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  width: 3px;
+  height: 20px;
+  background: rgba(14, 165, 164, 0.35);
+  border-radius: 2px;
+}
+
+/* =====================
+   5. Logo (inner pages)
+   ===================== */
+
+.logo {
+  display: block;
+  max-width: 220px;
+}
+
+.logo-notebook {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  max-width: 150px;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* =====================
+   6. Papierlaag (inhoud)
    ===================== */
 
 .notebook-paper {
   position: relative;
-  padding-top: calc(var(--notebook-baseline) * 2); /* wit bovenin */
+  z-index: 1;
 }
 
 /* =====================
-   5. Doorlopende lijnen (DESKTOP)
+   7. Notebook-lijnen (DESKTOP)
    ===================== */
 
 @media (min-width: 1024px) {
@@ -77,8 +134,10 @@ body {
   .notebook-paper::before {
     content: "";
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
     top: calc(var(--notebook-baseline) * 2);
+    bottom: 0;
     background-image: linear-gradient(
       to bottom,
       var(--notebook-line-color) 1px,
@@ -96,7 +155,7 @@ body {
 }
 
 /* =====================
-   6. Typografie (ongewijzigd gedrag)
+   8. Typografie op raster
    ===================== */
 
 p,
@@ -114,6 +173,8 @@ h3 {
   display: inline-block;
   padding-right: 8px;
 }
+
+/* Koppen breken bewust raster */
 
 h1 {
   font-size: 2rem;
@@ -134,7 +195,7 @@ h3 {
 }
 
 /* =====================
-   7. Secties & ritme
+   9. Secties & ritme
    ===================== */
 
 .section {
@@ -146,7 +207,7 @@ h3 {
 }
 
 /* =====================
-   8. Lijnloze ademruimte
+   10. Lijnloze ademruimte
    ===================== */
 
 .section--blank,
@@ -174,7 +235,7 @@ h3 {
 }
 
 /* =====================
-   9. Visual headings & schetsen
+   11. Visual headings
    ===================== */
 
 .visual-heading {
@@ -188,15 +249,14 @@ h3 {
   width: 100%;
   height: auto;
   background-color: var(--notebook-paper);
-  padding: 4px 6px; /* voelt ingelegd */
 }
 
 /* =====================
-   10. Lijsten
+   12. Lijsten
    ===================== */
 
 ul {
-  margin: 0 0 var(--notebook-baseline) calc(var(--notebook-baseline));
+  margin: 0 0 var(--notebook-baseline) var(--notebook-baseline);
   padding: 0;
 }
 
@@ -205,7 +265,7 @@ li {
 }
 
 /* =====================
-   11. Links
+   13. Links
    ===================== */
 
 a {
@@ -219,7 +279,7 @@ a:hover {
 }
 
 /* =====================
-   12. Mobile (bewust zonder lijnen)
+   14. Mobile (zonder lijnen)
    ===================== */
 
 @media (max-width: 640px) {
@@ -234,17 +294,31 @@ a:hover {
     box-shadow: none;
   }
 
+  .notebook-paper::before {
+    display: none;
+  }
+
   body {
     font-size: 0.95rem;
     line-height: 1.65;
   }
 
-  .notebook-paper::before {
-    display: none;
-  }
-
   .visual-heading {
     max-width: 100%;
     margin-bottom: 8px;
+  }
+
+  .logo-notebook,
+  .notebook-tabs {
+    display: none;
+  }
+
+  .mobile-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0,0,0,0.08);
   }
 }
